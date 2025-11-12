@@ -1,0 +1,30 @@
+sudo dnf install dnf-plugins-core -y
+sudo dnf config-manager --set-enabled powertools
+sudo dnf install python3.11 python3.11-pip -y
+python3.11 --version
+python3.11 -m venv ~/adk_env
+source ~/adk_env/bin/activate
+which adk
+adk create my_agent
+pip install --upgrade pip setuptools wheel
+pip install google-generativeai[adk]
+pip install google-adk
+adk create my_agent
+ll
+cd my_agent/
+ll
+ls -la
+vim .env
+adk run my_agent  
+  --> 1
+  --> 1
+
+
+
+
+Diagram Architecture
+my_agent/
+├── agent.py      ← main agent logic
+├── __init__.py
+└── .env          ← your API key
+
